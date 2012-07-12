@@ -1,8 +1,13 @@
 module DineroMailCheckout
   class Configuration
-    attr_accessor :payment_url, :account_number, :password, :logo_url, :success_url, :error_url, :pay_methods, :currency
-    PESO = 1
-    DOLLAR = 2
+    attr_accessor :payment_url, :merchant, :logo_url, :success_url, :error_url, :payment_method, :currency
+    class Currency
+      ARS = "ars"
+      MXN = "mxn"
+      CLP = "clp"
+      BRL = "brl"
+      USD = "usd"
+    end
   end
 
   class << self
