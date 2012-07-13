@@ -10,6 +10,7 @@ module DineroMailCheckout
     class << self
       def validate(attributes = {})
         attributes[:merchant] = (DineroMailCheckout.configuration.merchant || nil ) if attributes[:merchant].nil?
+        attributes[:country_id] = (DineroMailCheckout.configuration.country_id || nil ) if attributes[:country_id].nil?
         raise(MissingMerchantError) if attributes[:merchant].nil?
         raise(MissingCountryIdError) if attributes[:country_id].nil?
         raise(MissingItemNameError) if attributes[:item_name_1].nil?
@@ -19,7 +20,6 @@ module DineroMailCheckout
         attributes[:ok_url] = DineroMailCheckout.configuration.success_url if attributes[:ok_url].nil?
         attributes[:error_url] = DineroMailCheckout.configuration.error_url if attributes[:error_url].nil?
         attributes[:currency] = DineroMailCheckout.configuration.currency if attributes[:currency].nil?
-        attributes[:country_id] = DineroMailCheckout.configuration.currency if attributes[:country_id].nil?
         attributes
       end
     end
