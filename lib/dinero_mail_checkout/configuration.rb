@@ -1,6 +1,6 @@
 module DineroMailCheckout
   class Configuration
-    attr_accessor :payment_url, :merchant, :logo_url, :success_url, :error_url, :payment_method, :currency
+    attr_accessor :payment_url, :merchant, :logo_url, :success_url, :error_url, :payment_method, :currency, :country_id
     CHECKOUT_URL = "https://checkout.dineromail.com/CheckOut"
 
     class Currency

@@ -9,6 +9,7 @@ describe DineroMailCheckout do
       config.success_url = 'http://localhost:3000/success_page'
       config.error_url = 'http://localhost:3000/error_page'
       config.currency = DineroMailCheckout::Configuration::Currency::CLP
+      config.country_id = 2
     end
     DineroMailCheckout.configuration
   end
@@ -18,4 +19,5 @@ describe DineroMailCheckout do
   its(:success_url){ should == "http://localhost:3000/success_page" }
   its(:error_url){ should == "http://localhost:3000/error_page" }
   its(:currency){ should == DineroMailCheckout::Configuration::Currency::CLP }
+  its(:country_id){ should == 2 }
 end
