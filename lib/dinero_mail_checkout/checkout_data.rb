@@ -19,6 +19,7 @@ module DineroMailCheckout
         attributes[:ok_url] = DineroMailCheckout.configuration.success_url if attributes[:ok_url].nil?
         attributes[:error_url] = DineroMailCheckout.configuration.error_url if attributes[:error_url].nil?
         attributes[:currency] = DineroMailCheckout.configuration.currency if attributes[:currency].nil?
+        attributes[:country_id] = DineroMailCheckout.configuration.currency if attributes[:country_id].nil?
         attributes
       end
     end
