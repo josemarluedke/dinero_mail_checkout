@@ -44,7 +44,7 @@ describe DineroMailCheckout do
 
     it "should return the all data" do
       data = {country_id: 2, item_name_1: "Name", item_quantity_1: 1, item_ammount_1: 10}
-      DineroMailCheckout::CheckoutData.validate(data).should == {country_id: 2, item_name_1: "Name", item_quantity_1: 1, item_ammount_1: 10, merchant: "merchant", payment_method_available: "all", ok_url: "http://localhost:3000/success_page", error_url: "http://localhost:3000/error_page", currency: "clp"}
+      DineroMailCheckout::CheckoutData.validate(data).should == {country_id: 2, item_name_1: "Name", item_quantity_1: 1, item_ammount_1: 10, merchant: "merchant", payment_method_available: "all", ok_url: "http://localhost:3000/success_page", error_url: "http://localhost:3000/error_page", currency: "clp", :header_image=>"http://localhost:3000/assets/logo.png"}
     end
 
   end
