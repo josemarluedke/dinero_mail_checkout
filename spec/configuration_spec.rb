@@ -20,4 +20,19 @@ describe DineroMailCheckout do
   its(:error_url){ should == "http://localhost:3000/error_page" }
   its(:currency){ should == DineroMailCheckout::Configuration::Currency::CLP }
   its(:country_id){ should == 2 }
+
+  describe "country name feature" do
+    it "with 1, should return argentina" do
+      DineroMailCheckout::Configuration.country_name(1).should == "argentina"
+    end
+    it "with 2, should return brasil" do
+      DineroMailCheckout::Configuration.country_name(2).should == "brasil"
+    end
+    it "with 3, should return chile" do
+      DineroMailCheckout::Configuration.country_name(3).should == "chile"
+    end
+    it "with 4, should return mexico" do
+      DineroMailCheckout::Configuration.country_name(4).should == "mexico"
+    end
+  end
 end
