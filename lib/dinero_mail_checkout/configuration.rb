@@ -14,6 +14,15 @@ module DineroMailCheckout
 
   class << self
     attr_accessor :configuration
+
+    def get_country_name_by_id(id)
+      case id
+        when 1 then "argentina"
+        when 2 then "brasil"
+        when 3 then "chile"
+        when 4 then "mexico"
+      end
+    end
   end
 
   def self.configure
