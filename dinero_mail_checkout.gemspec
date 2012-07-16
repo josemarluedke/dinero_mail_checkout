@@ -4,7 +4,7 @@ require File.expand_path('../lib/dinero_mail_checkout/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Josemar Davi Luedke"]
   gem.email         = ["josemarluedke@gmail.com"]
-  gem.description   = %q{DineroMail checkout}
+  gem.description   = %q{DineroMail checkout library for Ruby}
   gem.summary       = %q{DineroMail checkout}
   gem.homepage      = "http://github.com/josemarluedke/dinero_mail_checkout"
 
